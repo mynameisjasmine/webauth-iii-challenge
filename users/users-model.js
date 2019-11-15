@@ -24,7 +24,7 @@ return db('users')
 .where(filter) 
 }
 
-function findById() {
+function findById(id) {
 return db('users')
 .where({ id })
 .first(); 

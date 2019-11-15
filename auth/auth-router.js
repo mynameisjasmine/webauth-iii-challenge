@@ -19,15 +19,14 @@ router.post('/register', (req, res) => {
     console.log('after hashing', user);
  
 
- Users.add(user)
- .then(saved => {
+ Users.add(user).then(saved => {
    console.log(saved);
-   return res.status(201).json(saved)
+    res.status(201).json(saved)
 
  })
  .catch(error => {
 
-   return res.status(500).json({message: "Unable to register user", err: error});
+    res.status(500).json({message: "Unable to register user", err: error});
   });
 })
 

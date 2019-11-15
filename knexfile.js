@@ -7,14 +7,16 @@ module.exports = {
     useNullAsDefault: true,
     connection: {
       filename: './dev.sqlite3'
-    }
+    },
+    migrations: {
+      directory: './migrations',
+     },
+     seeds: {
+       directory: './seeds'
+     }
+
   },
-  migrations: {
-   directory: './migrations',
-  },
-  seeds: {
-    directory: './seeds'
-  },
+  
 
   staging: {
     client: 'postgresql',
